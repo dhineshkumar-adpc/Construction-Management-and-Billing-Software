@@ -1,0 +1,30 @@
+{
+  "name": "construction-management-and-billing",
+  "version": "1.0.0",
+  "description": "Construction Management and Billing - Rental & Billing (Offline + Network Sync)",
+  "main": "main.js",
+  "author": "Dhineshkumar Adpc Murugan Trader <dhineshkumaradpc@gmail.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable --publish never"
+  },
+  "devDependencies": {
+    "electron": "22.3.27",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.constructionmanagement.billing",
+    "productName": "Construction Management and Billing",
+    "copyright": "Copyright © 2026 Dhineshkumar Adpc Murugan Trader. All rights reserved.",
+    "files": ["main.js", "index.html", "package.json", "vendor/**/*", "assets/**/*", "build/icon.ico"],
+    "win": {
+      "target": [{ "target": "portable", "arch": ["x64"] }],
+      "icon": "build/icon.ico"
+    },
+    "portable": { "artifactName": "Construction_Management_and_Billing.exe" },
+    "asar": true,
+    "compression": "maximum"
+  }
+}
